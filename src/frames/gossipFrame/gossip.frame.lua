@@ -199,12 +199,12 @@ function DGossipFrameAvailableQuestsUpdate(...)
         local gossipIcon = getglobal(titleButton:GetName() .. "GossipIcon")
 
         if gossipIcon then
-            gossipIcon:SetTexture("Interface\\AddOns\\DialogUI\\src\\assets\\art\\icons\\availableQuestIcon.tga")
+            gossipIcon:SetTexture("Interface\\AddOns\\DialogUIClassic\\src\\assets\\art\\icons\\availableQuestIcon.tga")
             gossipIcon:Show()
         end
 
         titleButton:SetNormalTexture(
-            "Interface\\AddOns\\DialogUI\\src\\assets\\art\\parchment\\OptionBackground-common")
+            "Interface\\AddOns\\DialogUIClassic\\src\\assets\\art\\parchment\\OptionBackground-common")
         SetFontColor(titleButton, "Ivory")
 
         titleButton:SetHeight(titleButton:GetTextHeight() + 20)
@@ -217,7 +217,7 @@ function DGossipFrameAvailableQuestsUpdate(...)
     if (DGossipFrame.buttonIndex > 1) then
         titleButton = getglobal("DGossipTitleButton" .. DGossipFrame.buttonIndex)
         titleButton:Hide()
-        DGossipFrame.buttonIndex = DGossipFrame.buttonIndex + 1
+        -- DGossipFrame.buttonIndex = DGossipFrame.buttonIndex + 1
     end
 end
 
@@ -243,7 +243,7 @@ function DGossipFrameActiveQuestsUpdate(...)
         local gossipIcon = getglobal(titleButton:GetName() .. "GossipIcon")
 
         if gossipIcon then
-            gossipIcon:SetTexture("Interface\\AddOns\\DialogUI\\src\\assets\\art\\icons\\activeQuestIcon.tga")
+            gossipIcon:SetTexture("Interface\\AddOns\\DialogUIClassic\\src\\assets\\art\\icons\\activeQuestIcon.tga")
             gossipIcon:Show()
         end
 
@@ -252,7 +252,7 @@ function DGossipFrameActiveQuestsUpdate(...)
         titleButton:Show()
 
         titleButton:SetNormalTexture(
-            "Interface\\AddOns\\DialogUI\\src\\assets\\art\\parchment\\OptionBackground-common")
+            "Interface\\AddOns\\DialogUIClassic\\src\\assets\\art\\parchment\\OptionBackground-common")
         titleButton:SetHeight(titleButton:GetTextHeight() + 20)
         SetFontColor(titleButton, "Ivory")
     end
@@ -260,7 +260,7 @@ function DGossipFrameActiveQuestsUpdate(...)
     if (titleIndex > 1) then
         titleButton = getglobal("DGossipTitleButton" .. DGossipFrame.buttonIndex);
         titleButton:Hide();
-        DGossipFrame.buttonIndex = DGossipFrame.buttonIndex + 1;
+        -- DGossipFrame.buttonIndex = DGossipFrame.buttonIndex + 1;
     end
 end
 
@@ -358,19 +358,19 @@ function DGossipFrameOptionsUpdate(...)
             specificType = DetermineGossipIconType(option.text)
 
             if specificType == "petTrainer" then
-                texturePath = "Interface\\AddOns\\DialogUI\\src\\assets\\art\\icons\\petTrainer.tga"
+                texturePath = "Interface\\AddOns\\DialogUIClassic\\src\\assets\\art\\icons\\petTrainer.tga"
             else
-                texturePath = "Interface\\AddOns\\DialogUI\\src\\assets\\art\\icons\\" .. specificType .. "GossipIcon.tga"
+                texturePath = "Interface\\AddOns\\DialogUIClassic\\src\\assets\\art\\icons\\" .. specificType .. "GossipIcon.tga"
             end
         elseif iconMap[iconType] then
-            texturePath = "Interface\\AddOns\\DialogUI\\src\\assets\\art\\icons\\" .. iconMap[iconType]
+            texturePath = "Interface\\AddOns\\DialogUIClassic\\src\\assets\\art\\icons\\" .. iconMap[iconType]
         else
             specificType = DetermineGossipIconType(option.text)
 
             if specificType == "petTrainer" then
-                texturePath = "Interface\\AddOns\\DialogUI\\src\\assets\\art\\icons\\petTrainer.tga"
+                texturePath = "Interface\\AddOns\\DialogUIClassic\\src\\assets\\art\\icons\\petTrainer.tga"
             else
-                texturePath = "Interface\\AddOns\\DialogUI\\src\\assets\\art\\icons\\" .. specificType .. "GossipIcon.tga"
+                texturePath = "Interface\\AddOns\\DialogUIClassic\\src\\assets\\art\\icons\\" .. specificType .. "GossipIcon.tga"
             end
         end
 
@@ -378,7 +378,7 @@ function DGossipFrameOptionsUpdate(...)
         gossipIcon:Show()
 
         if not gossipIcon:GetTexture() then
-            gossipIcon:SetTexture("Interface\\AddOns\\DialogUI\\src\\assets\\art\\icons\\PetitionGossipIcon.tga")
+            gossipIcon:SetTexture("Interface\\AddOns\\DialogUIClassic\\src\\assets\\art\\icons\\PetitionGossipIcon.tga")
         end
 
         DGossipFrame.buttonIndex = DGossipFrame.buttonIndex + 1
@@ -418,7 +418,7 @@ function DetermineGossipIconType(gossipText)
         return "classTrainer"
     elseif string.find(text, "stable") then
         return "stablemaster"
-    elseif string.find(text, "inn") then
+    elseif string.find(text, "inn your home") then
         return "innKeeper"
     elseif string.find(text, "mailbox") then
         return "mailbox"
