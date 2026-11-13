@@ -4,34 +4,43 @@
     LightBrown:  r="0.50" g="0.36" b="0.24"
     Ivory:  r="0.87" g="0.86" b="0.75"
      -->
-    <Font name="DQuestTitleFont" font="Interface\AddOns\DialogUI\src\assets\font\frizqt___cyr.ttf"
-        virtual="true">
+    <Font name="DQuestTitleFont" font="Interface\AddOns\DialogUIClassic\src\assets\font\frizqt___cyr.ttf"
+        virtual="true" spacing="3">
         <FontHeight>
-            <AbsValue val="18" />
+            <AbsValue val="24" />
+        </FontHeight>
+        <Color r="0.19" g="0.17" b="0.13" />
+    </Font>
+	<!--Objectives / Rewards-->
+	<Font name="DQuestRewardsFont" font="Interface\AddOns\DialogUIClassic\src\assets\font\frizqt___cyr.ttf"
+        virtual="true" spacing="3">
+        <FontHeight>
+            <AbsValue val="20" />
         </FontHeight>
         <Color r="0.19" g="0.17" b="0.13" />
     </Font>
     <!--NPC name-->
-    <Font name="DQuestFont" font="Interface\AddOns\DialogUI\src\assets\font\frizqt___cyr.ttf"
-        virtual="true">
+    <Font name="DQuestFont" font="Interface\AddOns\DialogUIClassic\src\assets\font\frizqt___cyr.ttf"
+        virtual="true" spacing="5">
         <FontHeight>
-            <AbsValue val="12" />
+            <AbsValue val="16" />
         </FontHeight>
-        <Color r="0.19" g="0.17" b="0.13" />
+		<Color r="0.19" g="0.17" b="0.13" />
     </Font>
     <!--Paragraph-->
-    <Font name="DQuestButtonTitleGossip" font="Interface\AddOns\DialogUI\src\assets\font\frizqt___cyr.ttf"
+    <Font name="DQuestButtonTitleGossip" font="Interface\AddOns\DialogUIClassic\src\assets\font\frizqt___cyr.ttf"
         virtual="true">
         <FontHeight>
-            <AbsValue val="12" />
+            <AbsValue val="14" />
         </FontHeight>
+		<Color r="0.19" g="0.17" b="0.13" />
     </Font>
-    <Font name="DGameFontNormal" inherits="MasterFont" font="Interface\AddOns\DialogUI\src\assets\font\frizqt___cyr.ttf" virtual="true">
+    <Font name="DGameFontNormal" inherits="MasterFont" font="Interface\AddOns\DialogUIClassic\src\assets\font\frizqt___cyr.ttf" virtual="true">
         <FontHeight>
             <AbsValue val="12"/>
         </FontHeight>
     </Font>
-    <Font name="DGameFontBlack" font="Interface\AddOns\DialogUI\src\assets\font\frizqt___cyr.ttf" virtual="true">
+    <Font name="DGameFontBlack" font="Interface\AddOns\DialogUIClassic\src\assets\font\frizqt___cyr.ttf" virtual="true">
         <FontHeight>
             <AbsValue val="12"/>
         </FontHeight>
