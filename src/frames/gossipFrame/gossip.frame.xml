@@ -1,27 +1,27 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <Script file="src\frames\gossipFrame\gossip.frame.lua" />
     <Frame name="DGossipFramePanelTemplate" virtual="true">
-        <Size x="512" y="512" />
+        <Size x="612" y="612" />
         <Anchors>
             <Anchor point="TOPLEFT" />
         </Anchors>
         <Layers>
             <Layer level="BACKGROUND">
-                <Texture file="Interface\AddOns\DialogUI\src\assets\art\parchment\Parchment">
-                    <Size x="512" y="512" />
+                <Texture file="Interface\AddOns\DialogUIClassic\src\assets\art\parchment\Parchment">
+                    <Size x="612" y="612" />
                 </Texture>
             </Layer>
         </Layers>
     </Frame>
     <Button name="DGossipTitleButtonTemplate" virtual="true" hidden="false">
-        <Size x="400" y="20" />
+        <Size x="485" y="20" />
         <Scripts>
             <OnClick>
                 DGossipTitleButton_OnClick();
             </OnClick>
         </Scripts>
         <HighlightTexture
-            file="Interface\AddOns\DialogUI\src\assets\art\parchment\ButtonHighlight-Gossip"
+            file="Interface\AddOns\DialogUIClassic\src\assets\art\parchment\ButtonHighlight-Gossip"
             alphaMode="ADD" />
         <Layers>
             <Layer level="OVERLAY">
@@ -32,7 +32,7 @@
                     <Anchors>
                         <Anchor point="TOPLEFT">
                             <Offset>
-                                <AbsDimension x="5" y="-6" />
+                                <AbsDimension x="12" y="-5" />
                             </Offset>
                         </Anchor>
                     </Anchors>
@@ -40,11 +40,11 @@
             </Layer>
         </Layers>
         <ButtonText inherits="DQuestButtonTitleGossip" justifyH="LEFT">
-            <Size x="275" y="0" />
+            <Size x="450" y="0" />
             <Anchors>
                 <Anchor point="LEFT">
                     <Offset>
-                        <AbsDimension x="30" y="0" />
+                        <AbsDimension x="35" y="0" />
                         <!-- This move the text inside the button-->
                     </Offset>
                 </Anchor>
@@ -54,37 +54,37 @@
     <Frame name="DGossipFrame" toplevel="true" parent="UIParent" movable="true" enableMouse="true"
         hidden="true">
         <Size>
-            <AbsDimension x="384" y="512" />
+            <AbsDimension x="612" y="612" />
         </Size>
         <Anchors>
             <Anchor point="TOPLEFT">
                 <Offset>
-                    <AbsDimension x="0" y="-104" />
+                    <AbsDimension x="50" y="-104" />
                 </Offset>
             </Anchor>
         </Anchors>
         <Frames>
             <Frame name="DGossipNpcNameFrame">
                 <Size>
-                    <AbsDimension x="300" y="14" />
+                    <AbsDimension x="612" y="60" />
                 </Size>
                 <Anchors>
                     <Anchor point="TOP" relativeTo="DGossipFrame" relativePoint="TOP">
                         <Offset>
-                            <AbsDimension x="4" y="-50" />
+                            <AbsDimension x="50" y="-50" />
                         </Offset>
                     </Anchor>
                 </Anchors>
                 <Layers>
                     <Layer level="ARTWORK">
-                        <FontString name="DGossipFrameNpcNameText" inherits="DQuestTitleFont" justifyH="LEFT">
+                        <FontString name="DGossipFrameNpcNameText" inherits="DQuestTitleFont" justifyH="LEFT" justifyV="BOTTOM">
                             <Size>
-                                <AbsDimension x="235" y="20"/>
+                                <AbsDimension x="490" y="50"/>
                             </Size>
                             <Anchors>
                                 <Anchor point="TOPLEFT">
                                     <Offset>
-                                        <AbsDimension x="60" y="0" />
+                                        <AbsDimension x="65" y="13" />
                                     </Offset>
                                 </Anchor>
                             </Anchors>
@@ -93,12 +93,12 @@
                     <Layer level="OVERLAY">
                         <Texture name="DGossipFramePortrait">
                             <Size>
-                                <AbsDimension x="50" y="50" />
+                                <AbsDimension x="43" y="43" />
                             </Size>
                             <Anchors>
                                 <Anchor point="TOPLEFT">
                                     <Offset>
-                                        <AbsDimension x="3" y="16" />
+                                        <AbsDimension x="4" y="-1" />
                                     </Offset>
                                 </Anchor>
                             </Anchors>
@@ -116,18 +116,18 @@
                 <Frames>
                     <Button name="DGossipFrameGreetingGoodbyeButton" inherits="DUIPanelButtonTemplate" text="GOODBYE">
                         <Size>
-                            <AbsDimension x="200" y="40" />
+                            <AbsDimension x="240" y="40" />
                         </Size>
                         <Anchors>
                             <Anchor point="BOTTOMRIGHT" relativeTo="DGossipFrame" relativePoint="BOTTOMRIGHT">
                                 <Offset>
-                                    <AbsDimension x="80" y="40" />
+                                    <AbsDimension x="-65" y="40" />
                                 </Offset>
                             </Anchor>
                         </Anchors>
                         <Layers>
                             <Layer level="ARTWORK">
-                                <Texture name="$parentIcon" file="Interface\AddOns\DialogUI\src\assets\art\keys\esc">
+                                <Texture name="$parentIcon" file="Interface\AddOns\DialogUIClassic\src\assets\art\keys\esc">
                                     <Size>
                                         <AbsDimension x="32" y="32" />
                                     </Size>
@@ -150,32 +150,32 @@
                     <ScrollFrame name="DGossipGreetingScrollFrame"
                         inherits="DUIPanelScrollFrameTemplate">
                         <Size>
-                            <AbsDimension x="400" y="334" />
+                            <AbsDimension x="490" y="400" />
                         </Size>
                         <Anchors>
                             <Anchor point="TOPLEFT" relativeTo="DGossipFrame">
                                 <Offset>
                                     <!-- move contents of the frame -->
-                                    <AbsDimension x="40" y="-90" />
+                                    <AbsDimension x="50" y="-120" />
                                 </Offset>
                             </Anchor>
                         </Anchors>
                         <ScrollChild>
                             <Frame name="DGossipGreetingScrollChildFrame">
                                 <Size>
-                                    <AbsDimension x="512" y="334" />
+                                    <AbsDimension x="485" y="400" />
                                 </Size>
                                 <Layers>
                                     <Layer>
                                         <FontString name="DGossipGreetingText" inherits="DQuestFont"
                                             text="Filler Text" justifyH="LEFT">
                                             <Size>
-                                                <AbsDimension x="370" y="0" />
+                                                <AbsDimension x="485" y="0" />
                                             </Size>
                                             <Anchors>
                                                 <Anchor point="TOPLEFT">
                                                     <Offset>
-                                                        <AbsDimension x="10" y="-10" />
+                                                        <AbsDimension x="0" y="0" />
                                                     </Offset>
                                                 </Anchor>
                                             </Anchors>
