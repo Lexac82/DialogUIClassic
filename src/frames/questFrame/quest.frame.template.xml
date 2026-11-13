@@ -2,15 +2,15 @@
     xsi:schemaLocation="http://www.blizzard.com/wow/ui/">
     <Frame name="DQuestFramePanelTemplate" virtual="true">
         <Size>
-            <AbsDimension x="512" y="512" />
+            <AbsDimension x="612" y="612" />
         </Size>
         <Anchors>
             <Anchor point="TOPLEFT" />
-        </Anchors>
+		</Anchors>
         <Layers>
             <Layer level="BACKGROUND">
-                <Texture file="Interface\AddOns\DialogUI\src\assets\art\parchment\Parchment">
-                    <Size x="512" y="512" />
+                <Texture file="Interface\AddOns\DialogUIClassic\src\assets\art\parchment\Parchment">
+                    <Size x="612" y="612" />
                 </Texture>
             </Layer>
         </Layers>
@@ -18,25 +18,25 @@
     <!-- TODO properly change the DQuestItemTemplate and  DQuestRewardItemTemplate -->
     <Button name="DQuestItemTemplate" virtual="true">
         <Size>
-            <AbsDimension x="147" y="41" />
+            <AbsDimension x="240" y="50" />
         </Size>
         <Layers>
             <Layer level="BACKGROUND">
-                <Texture name="$parentBackground" file="Interface\AddOns\DialogUI\src\assets\art\parchment\RewardChoice-Pending">
+                <Texture name="$parentBackground" file="Interface\AddOns\DialogUIClassic\src\assets\art\parchment\RewardChoice-Pending">
                     <Size>
-                        <AbsDimension x="190" y="50" />
+                        <AbsDimension x="240" y="50" />
                     </Size>
                     <Anchors>
                         <Anchor point="TOPLEFT">
                             <Offset>
-                                <AbsDimension x="-2" y="5" />
+                                <AbsDimension x="0" y="0" />
                             </Offset>
                         </Anchor>
                     </Anchors>
                 </Texture>
                 <Texture name="$parentNameFrame" file="">
                     <Size>
-                        <AbsDimension x="128" y="64" />
+                        <AbsDimension x="240" y="50" />
                     </Size>
                     <Anchors>
                         <Anchor point="LEFT" relativeTo="$parentIconTexture" relativePoint="RIGHT">
@@ -53,9 +53,9 @@
                         <AbsDimension x="35" y="35" />
                     </Size>
                     <Anchors>
-                        <Anchor point="TOPLEFT">
+                        <Anchor point="LEFT">
                             <Offset>
-                                <AbsDimension x="5" y="-2" />
+                                <AbsDimension x="9" y="0" />
                             </Offset>
                         </Anchor>
                     </Anchors>
@@ -64,12 +64,12 @@
             <Layer level="ARTWORK">
                 <FontString name="$parentName" inherits="DGameFontHighlight" justifyH="LEFT">
                     <Size>
-                        <AbsDimension x="120" y="36" />
+                        <AbsDimension x="170" y="36" />
                     </Size>
                     <Anchors>
                         <Anchor point="LEFT" relativeTo="$parentBackground">
                             <Offset>
-                                <AbsDimension x="45" y="0" />
+                                <AbsDimension x="53" y="0" />
                             </Offset>
                         </Anchor>
                     </Anchors>
@@ -123,18 +123,18 @@
     </Button>
     <Button name="DQuestTitleButtonTemplate" virtual="true">
         <Size>
-            <AbsDimension x="400" y="20" />
+            <AbsDimension x="470" y="20" />
         </Size>
         <Layers>
             <Layer level="BACKGROUND">
-                <Texture name="$parentQuestIcon" file="Interface\AddOns\DialogUI\src\assets\art\icons\availableQuestIcon">
+                <Texture name="$parentQuestIcon" file="Interface\AddOns\DialogUIClassic\src\assets\art\icons\availableQuestIcon">
                     <Size>
-                        <AbsDimension x="16" y="16" />
+                        <AbsDimension x="20" y="20" />
                     </Size>
                     <Anchors>
                         <Anchor point="TOPLEFT">
                             <Offset>
-                                <AbsDimension x="3" y="-5" />
+                                <AbsDimension x="10" y="-5" />
                             </Offset>
                         </Anchor>
                     </Anchors>
@@ -147,11 +147,11 @@
         </OnClick>
         </Scripts>
         <HighlightTexture
-        file="Interface\AddOns\DialogUI\src\assets\art\parchment\ButtonHighlight-Gossip"
+        file="Interface\AddOns\DialogUIClassic\src\assets\art\parchment\ButtonHighlight-Gossip"
         alphaMode="ADD" />
         <ButtonText>
             <Size>
-                <AbsDimension x="275" y="0" />
+                <AbsDimension x="375" y="0" />
             </Size>
             <Anchors>
                 <Anchor point="TOPLEFT">
@@ -162,7 +162,7 @@
                 </Anchor>
             </Anchors>
         </ButtonText>
-        <NormalFont inherits="DQuestFont" justifyH="LEFT">
+        <NormalFont inherits="DQuestButtonTitleGossip" justifyH="LEFT">
             <Anchors>
                 <Anchor point="LEFT">
                     <Offset>
