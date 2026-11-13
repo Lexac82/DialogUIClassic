@@ -269,9 +269,9 @@ function DQuestFrameProgressItems_Update()
             if (i > 1) then
                 requiredItem:ClearAllPoints();
                 if (mod(i, 2) == 1) then
-                    requiredItem:SetPoint("TOPLEFT", questItemName .. (i - 2), "BOTTOMLEFT", 0, -20);
+                    requiredItem:SetPoint("TOPLEFT", questItemName .. (i - 2), "BOTTOMLEFT", 0, -15);
                 else
-                    requiredItem:SetPoint("TOPLEFT", questItemName .. (i - 1), "TOPRIGHT", 50, 0);
+                    requiredItem:SetPoint("TOPLEFT", questItemName .. (i - 1), "TOPRIGHT", 15, 0);
                 end
             end
         end
@@ -567,9 +567,9 @@ function DQuestFrameItems_Update(questState)
             if (i > 1) then
                 questItem:ClearAllPoints();
                 if (mod(i, 2) == 1) then
-                    questItem:SetPoint("TOPLEFT", questItemName .. (index - 2), "BOTTOMLEFT", 0,-20);
+                    questItem:SetPoint("TOPLEFT", questItemName .. (index - 2), "BOTTOMLEFT", 0,-15);
                 else
-                    questItem:SetPoint("TOPLEFT", questItemName .. (index - 1), "TOPRIGHT", 50, 0);
+                    questItem:SetPoint("TOPLEFT", questItemName .. (index - 1), "TOPRIGHT", 15, 0);
                 end
             else
                 questItem:ClearAllPoints();
@@ -677,9 +677,9 @@ function DQuestFrameItems_Update(questState)
             if (i > 1) then
                 questItem:ClearAllPoints();
                 if (mod(i, 2) == 1) then
-                    questItem:SetPoint("TOPLEFT", questItemName .. (index - 2), "BOTTOMLEFT", 0, -20);
+                    questItem:SetPoint("TOPLEFT", questItemName .. (index - 2), "BOTTOMLEFT", 0, -15);
                 else
-                    questItem:SetPoint("TOPLEFT", questItemName .. (index - 1), "TOPRIGHT", 50, 0);
+                    questItem:SetPoint("TOPLEFT", questItemName .. (index - 1), "TOPRIGHT", 15, 0);
                 end
             else
                 questItem:ClearAllPoints();
@@ -722,11 +722,12 @@ function DQuestFrameDetailPanel_OnShow()
     DQuestDescription:SetAlphaGradient(0, QUEST_DESCRIPTION_GRADIENT_LENGTH);
     if (QUEST_FADING_DISABLE == "1") then
         DQuestFrameDetailPanel.fadingProgress = 1024;
-    end
+    end	
 end
 
 function DQuestFrameDetailPanel_OnUpdate(elapsed)
-    if (this.fading) then
+    DQuestFrameNpcNameText:SetText(GetTitleText());
+	if (this.fading) then
         this.fadingProgress = this.fadingProgress + (elapsed * QUEST_DESCRIPTION_GRADIENT_CPS);
         PlaySound("WriteQuest");
         if (not DQuestDescription:SetAlphaGradient(this.fadingProgress, QUEST_DESCRIPTION_GRADIENT_LENGTH)) then
@@ -766,8 +767,8 @@ local function UpdateQuestIcons()
         if button and button:IsVisible() then
             local iconTexture = button:GetRegions(); -- Gets the first region (your texture)
             if iconTexture and iconTexture.SetTexture then
-                iconTexture:SetTexture("Interface\\AddOns\\DialogUI\\src\\assets\\art\\icons\\activeQuestIcon");
-            end
+                iconTexture:SetTexture("Interface\\AddOns\\DialogUIClassic\\src\\assets\\art\\icons\\activeQuestIcon");
+            end			
         end
     end
     
@@ -777,8 +778,8 @@ local function UpdateQuestIcons()
         if button and button:IsVisible() then
             local iconTexture = button:GetRegions(); -- Gets the first region (your texture)
             if iconTexture and iconTexture.SetTexture then
-                iconTexture:SetTexture("Interface\\AddOns\\DialogUI\\src\\assets\\art\\icons\\availableQuestIcon");
-            end
+                iconTexture:SetTexture("Interface\\AddOns\\DialogUIClassic\\src\\assets\\art\\icons\\availableQuestIcon");
+            end			
         end
     end
 end
