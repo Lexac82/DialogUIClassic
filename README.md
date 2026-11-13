@@ -27,13 +27,14 @@ To change the style of the buttons or of the frame :
 
 > DialogUIClassic/src/assets/art/parchment/ParchmentLayout.xcf
 
-<h3>Gallery</h3>
-<img width="630" height="619" alt="image" src="https://github.com/user-attachments/assets/f7998967-420b-4de2-a222-0a80f23538c6" />
+# Gallery
 
-<img width="630" height="619" alt="image" src="https://github.com/user-attachments/assets/d23dfb9d-bfb3-4ce4-9432-90fa2f106bd9" />
+<img width="75%" height="75%" alt="image" src="src/preview/GossipFrame.png" />
 
-<img width="630" height="619" alt="image" src="https://github.com/user-attachments/assets/f07b2963-c993-41ec-a190-3142728aa7ef" />
+<img width="75%" height="75%" alt="image" src="src/preview/QuestGreetingFrame.png" />
 
-<img width="630" height="619" alt="image" src="https://github.com/user-attachments/assets/93c285e3-2b06-4219-8db0-de227777b5f1" />
+<img width="75%" height="75%" alt="image" src="src/preview/QuestDetailFrame.png" />
+
+<img width="75%" height="75%" alt="image" src="src/preview/BookFrame.png" />
 
 [DialogueUI](https://www.curseforge.com/wow/addons/dialogueui) was obviously the inspiration for this new look.
