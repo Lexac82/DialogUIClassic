@@ -180,7 +180,11 @@ function DialogUI_UpdateKeyBindingLabels()
     DialogUI_SetButtonKeyText("DQuestFrameCancelButton", DIALOGUI_DECLINE_BINDING, "ESCAPE");
     DialogUI_SetButtonKeyText("DQuestFrameGreetingGoodbyeButton", DIALOGUI_DECLINE_BINDING, "ESCAPE");
     DialogUI_SetButtonKeyText("DQuestFrameGoodbyeButton", DIALOGUI_DECLINE_BINDING, "ESCAPE");
+	
     DialogUI_SetButtonKeyText("DGossipFrameGreetingGoodbyeButton", DIALOGUI_DECLINE_BINDING, "ESCAPE");
+	
+	DialogUI_SetButtonKeyText("DBookNextButton", DIALOGUI_ACCEPT_BINDING, "SPACE");
+	-- DialogUI_SetButtonKeyText("DBookPreviousButton", DIALOGUI_DECLINE_BINDING, "ESCAPE");
 end
 
 local DialogUIBindingFrame = CreateFrame("Frame");
