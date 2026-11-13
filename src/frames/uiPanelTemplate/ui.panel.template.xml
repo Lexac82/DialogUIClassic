@@ -63,8 +63,8 @@
                 this:GetParent():SetVerticalScroll(arg1);
             </OnValueChanged>
         </Scripts>
-        <ThumbTexture name="$parentThumbTexture" inherits="DUIPanelScrollBarButton"
-            file="Interface\AddOns\DialogUI\src\assets\art\parchment\UI-ScrollBar-Knob">
+        <ThumbTexture name="$parentThumbTexture" inherits="DUIPanelScrollBarButton" file="">
+            <!-- file="Interface\AddOns\DialogUI\src\assets\art\parchment\UI-ScrollBar-Knob"> -->
             <Size>
                 <AbsDimension x="24" y="24" />
             </Size>
@@ -151,12 +151,12 @@
                 <Anchors>
                     <Anchor point="TOPLEFT" relativePoint="TOPRIGHT">
                         <Offset>
-                            <AbsDimension x="6" y="-16" />
+                            <AbsDimension x="-10" y="-16" />
                         </Offset>
                     </Anchor>
                     <Anchor point="BOTTOMLEFT" relativePoint="BOTTOMRIGHT">
                         <Offset>
-                            <AbsDimension x="6" y="16" />
+                            <AbsDimension x="-10" y="16" />
                         </Offset>
                     </Anchor>
                 </Anchors>
@@ -169,7 +169,7 @@
             <OnScrollRangeChanged>
                 ScrollFrame_OnScrollRangeChanged(arg2);
             </OnScrollRangeChanged>
-            <!--  The code to disable the ScrollDownButton is pretty hacked, but it works -->
+            <!--  The code to disable the ScrollDownButton is pretty hacked, but it works  -->
             <OnVerticalScroll>
                 local scrollbar = getglobal(this:GetName().."ScrollBar");
                 scrollbar:SetValue(arg1);
