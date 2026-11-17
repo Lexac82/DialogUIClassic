@@ -126,15 +126,15 @@
             <AbsDimension x="470" y="20" />
         </Size>
         <Layers>
-            <Layer level="BACKGROUND">
+            <Layer level="OVERLAY">
                 <Texture name="$parentQuestIcon" file="Interface\AddOns\DialogUIClassic\src\assets\art\icons\availableQuestIcon">
                     <Size>
                         <AbsDimension x="20" y="20" />
                     </Size>
                     <Anchors>
-                        <Anchor point="TOPLEFT">
+                        <Anchor point="LEFT">
                             <Offset>
-                                <AbsDimension x="10" y="-5" />
+                                <AbsDimension x="10" y="0" />
                             </Offset>
                         </Anchor>
                     </Anchors>
@@ -149,20 +149,20 @@
         <HighlightTexture
         file="Interface\AddOns\DialogUIClassic\src\assets\art\parchment\ButtonHighlight-Gossip"
         alphaMode="ADD" />
-        <ButtonText>
+        <ButtonText inherits="DQuestButtonTitleGossip" justifyH="LEFT">
             <Size>
                 <AbsDimension x="375" y="0" />
             </Size>
             <Anchors>
-                <Anchor point="TOPLEFT">
+                <Anchor point="LEFT">
                     <Offset>
                         <!-- controls the text inside of greeting panel  -->
-                        <AbsDimension x="30" y="-7" />
+                        <AbsDimension x="30" y="0" />
                     </Offset>
                 </Anchor>
             </Anchors>
         </ButtonText>
-        <NormalFont inherits="DQuestButtonTitleGossip" justifyH="LEFT">
+        <!--<NormalFont inherits="DQuestButtonTitleGossip" justifyH="LEFT">
             <Anchors>
                 <Anchor point="LEFT">
                     <Offset>
@@ -170,6 +170,6 @@
                     </Offset>
                 </Anchor>
             </Anchors>
-        </NormalFont>
+        </NormalFont> -->
     </Button>
 </Ui>
