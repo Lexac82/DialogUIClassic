@@ -119,7 +119,7 @@ local function DialogUI_SetButtonKeyText(buttonName, command, defaultKey)
         icon:Hide();
     end
 
-    local keyBackground = getglobal(buttonName .. "KeyBackground");
+	local keyBackground = getglobal(buttonName .. "KeyBackground");
     if (not keyBackground) then
         keyBackground = button:CreateTexture(buttonName .. "KeyBackground", "ARTWORK");
         keyBackground:SetPoint("LEFT", button, "LEFT", 8, 0);
@@ -157,12 +157,12 @@ local function DialogUI_SetButtonKeyText(buttonName, command, defaultKey)
     keyBackground:SetWidth(keyWidth);
     keyBorder:SetWidth(keyWidth + 2);
     keyText:SetText(bindingText);
-
+	
     local buttonText = getglobal(buttonName .. "Text");
     if (buttonText) then
         buttonText:ClearAllPoints();
         buttonText:SetPoint("LEFT", button, "LEFT", keyWidth + 20, 0);
-        buttonText:SetPoint("RIGHT", button, "RIGHT", -10, 0);
+		buttonText:SetPoint("RIGHT", button, "RIGHT", -10, 0);
         buttonText:SetJustifyH("LEFT");
     end
 
