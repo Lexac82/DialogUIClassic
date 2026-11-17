@@ -311,7 +311,7 @@ function DQuestFrameGreetingPanel_OnShow()
     else
         DCurrentQuestsText:SetPoint("TOPLEFT", "DGreetingText", "BOTTOMLEFT", 0, -10);
         DCurrentQuestsText:Show();
-        DQuestTitleButton1:SetPoint("TOPLEFT", "DCurrentQuestsText", "BOTTOMLEFT", -10, -5);
+        DQuestTitleButton1:SetPoint("TOPLEFT", "DCurrentQuestsText", "BOTTOMLEFT", 0, -10);
         for i = 1, numActiveQuests, 1 do
             local questTitleButton = getglobal("DQuestTitleButton" .. i);
             -- Add number prefix (1-9) to the quest title
@@ -322,11 +322,14 @@ function DQuestFrameGreetingPanel_OnShow()
                 questTitleButton:SetText(questTitle);
             end
             questTitleButton:SetHeight(questTitleButton:GetTextHeight() + 20);
+			questTitleButton:SetNormalTexture(
+            "Interface\\AddOns\\DialogUIClassic\\src\\assets\\art\\parchment\\OptionBackground-common")
+			SetFontColor(questTitleButton, "Ivory")
             questTitleButton:SetID(i);
             questTitleButton.isActive = 1;
             questTitleButton:Show();
             if (i > 1) then
-                questTitleButton:SetPoint("TOPLEFT", "DQuestTitleButton" .. (i - 1), "BOTTOMLEFT", 0, 0)
+                questTitleButton:SetPoint("TOPLEFT", "DQuestTitleButton" .. (i - 1), "BOTTOMLEFT", 0, -5)
             end
             buttonIndex = buttonIndex + 1;
         end
@@ -337,15 +340,15 @@ function DQuestFrameGreetingPanel_OnShow()
     else
         if (numActiveQuests > 0) then
             DQuestGreetingFrameHorizontalBreak:SetPoint("TOPLEFT", "DQuestTitleButton" .. numActiveQuests, "BOTTOMLEFT",
-                22, -10);
+                0, -10);
             DQuestGreetingFrameHorizontalBreak:Show();
-            DAvailableQuestsText:SetPoint("TOPLEFT", "DQuestGreetingFrameHorizontalBreak", "BOTTOMLEFT", -12, -10);
+            DAvailableQuestsText:SetPoint("TOPLEFT", "DQuestGreetingFrameHorizontalBreak", "BOTTOMLEFT", 0, -10);
         else
             DAvailableQuestsText:SetPoint("TOPLEFT", "DGreetingText", "BOTTOMLEFT", 0, -10);
         end
         DAvailableQuestsText:Show();
         getglobal("DQuestTitleButton" .. (numActiveQuests + 1)):SetPoint("TOPLEFT", "DAvailableQuestsText", "BOTTOMLEFT",
-            -10, -5);
+            0, -10);
         for i = (numActiveQuests + 1), (numActiveQuests + numAvailableQuests), 1 do
             local questTitleButton = getglobal("DQuestTitleButton" .. i);
             -- Add number prefix (1-9) to the quest title
@@ -356,11 +359,14 @@ function DQuestFrameGreetingPanel_OnShow()
                 questTitleButton:SetText(questTitle);
             end
             questTitleButton:SetHeight(questTitleButton:GetTextHeight() + 20);
-            questTitleButton:SetID(i - numActiveQuests);
+            questTitleButton:SetNormalTexture(
+            "Interface\\AddOns\\DialogUIClassic\\src\\assets\\art\\parchment\\OptionBackground-common")
+			SetFontColor(questTitleButton, "Ivory")
+			questTitleButton:SetID(i - numActiveQuests);
             questTitleButton.isActive = 0;
             questTitleButton:Show();
             if (i > numActiveQuests + 1) then
-                questTitleButton:SetPoint("TOPLEFT", "DQuestTitleButton" .. (i - 1), "BOTTOMLEFT", 0, 0)
+                questTitleButton:SetPoint("TOPLEFT", "DQuestTitleButton" .. (i - 1), "BOTTOMLEFT", 0, -5)
             end
             buttonIndex = buttonIndex + 1;
         end
