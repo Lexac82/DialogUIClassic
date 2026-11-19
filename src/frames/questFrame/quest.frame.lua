@@ -95,7 +95,7 @@ function DQuestFrame_OnEvent(event)
 end
 
 function DQuestFrame_SetPortrait()
-    DQuestFrameNpcNameText:SetText(UnitName("npc"));
+    if DQuestFrameGreetingPanel:IsVisible() then DQuestFrameNpcNameText:SetText(UnitName("npc")); end    
     if (UnitExists("npc")) then
         SetPortraitTexture(DQuestFramePortrait, "npc");
     else
